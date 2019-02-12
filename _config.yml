@@ -14,10 +14,7 @@ description: 'Write an awesome description for your new site here. You can edit 
   results) and in your feed.xml site description.
 
 '
-baseurl: "/jekyll-simple"
-url: http://wildflame.me
 twitter_username: Taffyer
-github_username: wild-flame
 markdown: kramdown
 kramdown:
   input: GFM
