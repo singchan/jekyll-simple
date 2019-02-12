@@ -1,8 +1,11 @@
 ---
+title: Styles at a glance
+date: 2016-07-03 00:00:00 Z
+categories:
+- jekyll
 layout: post
-title:  Styles at a glance
-category: jekyll 
-description: Simple is a beautiful but functional jekyll theme. The font-type setting looks really good when writers use CJK mixed with English.
+description: Simple is a beautiful but functional jekyll theme. The font-type setting
+  looks really good when writers use CJK mixed with English.
 ---
 
 Simple is a beautiful but functional jekyll theme. The font-type setting looks really good when writers use CJK mixed with English.
