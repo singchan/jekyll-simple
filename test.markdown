@@ -5,6 +5,8 @@ price: "$ 97"
 layout: page-1
 ---
 
+## Titre 2
+
 test layout silex
 
 ![join.png](/uploads/join.png)
