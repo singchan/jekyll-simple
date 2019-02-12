@@ -5,3 +5,5 @@ layout: page-1
 ---
 
 test layout silex
+
+![join.png](/uploads/join.png)
