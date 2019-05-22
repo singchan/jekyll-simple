@@ -23,7 +23,7 @@
   <script>
     var freez = false;
     function setIframeSrc() {
-      var API_ROOT_URL = 'https://app.stastic.net/admin.html';
+      var API_ROOT_URL = 'https://content.stastic.net/admin.html';
       var url = API_ROOT_URL
         + '#' + encodeURIComponent(window.location.href.replace(window.location.search, '').replace(window.location.hash, '').replace('/admin', ''))
         + '/' + encodeURIComponent('jekyll-simple/gh-pages')
@@ -32,7 +32,7 @@
       document.getElementById('stastic').src = url;
     }
     window.addEventListener('hashchange', function(event) {
-      if(freez) return;
+      // if(freez) return;
       console.log('hashchange', window.location.hash);
       document.getElementById('stastic').contentWindow.postMessage({
         type: 'hashChanged',
@@ -41,11 +41,12 @@
       // setIframeSrc();
     });
     window.addEventListener('message', function(event) {
-      if(freez) return;
-      console.log('post message admin', event, event.data);
+      // if(freez) return;
+      console.log('post message admin', event.data, event.data.replace);
       if(event.data.type && event.data.route && event.data.type === 'hashChanged') {
         freez = true;
-        window.location.hash = '#' + event.data.route;
+        if(event.data.replace) window.location.replace('#' + event.data.route);
+        else window.location.hash = '#' + event.data.route;
         setTimeout(function() { freez = false; }, 0);
       }
       if(event.data.type && event.data.url && event.data.type === 'redirect') {
