@@ -28,12 +28,12 @@
         + '#' + encodeURIComponent(window.location.href.replace(window.location.search, '').replace(window.location.hash, '').replace('/admin', ''))
         + '/' + encodeURIComponent('jekyll-simple/gh-pages')
         + '/' + window.location.hash.substr(1);
-      console.log('iframe', url);
+
       document.getElementById('stastic').src = url;
     }
     window.addEventListener('hashchange', function(event) {
       // if(freez) return;
-      console.log('hashchange', window.location.hash);
+
       document.getElementById('stastic').contentWindow.postMessage({
         type: 'hashChanged',
         route: window.location.hash.substr(1),
@@ -42,7 +42,7 @@
     });
     window.addEventListener('message', function(event) {
       // if(freez) return;
-      console.log('post message admin', event.data, event.data.replace);
+
       if(event.data.type && event.data.route && event.data.type === 'hashChanged') {
         freez = true;
         if(event.data.replace) window.location.replace('#' + event.data.route);

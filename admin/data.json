@@ -34,8 +34,5 @@ notPage:
       {%- endunless -%}
     {%- endfor -%}
   ],
-  "data": {{ site.data | jsonify }},
-  "tags": ["todo"],
-  "categories": ["todo"],
-  "users": ["todo"]
+  "data": {{ site.data | jsonify }}
 }
